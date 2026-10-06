@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import LandingPage from './pages/LandingPage';
 import AuthPage from './pages/AuthPage';
@@ -77,7 +77,7 @@ import CampusIntelligencePage from './pages/officer/CampusIntelligencePage';
 export default function App() {
   return (
     <AuthProvider>
-      <BrowserRouter>
+      <HashRouter>
         <ErrorBoundary>
           <Routes>
             {/* Landing Page */}
@@ -680,7 +680,7 @@ export default function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
         </ErrorBoundary>
-      </BrowserRouter>
+      </HashRouter>
     </AuthProvider>
   );
 }
